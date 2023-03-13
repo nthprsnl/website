@@ -143,13 +143,15 @@ html::-webkit-scrollbar-thumb {
 }
 
 @media all and (max-width: 1024px) {
-    header {
-        flex-direction:column;
-    }
     .body-content {
         flex-direction: column-reverse;
     }
     .blogs {
         max-width: none;
+    }
+}
+@media all and (max-width: 800px) {
+    header {
+        flex-direction:column;
     }
 }
