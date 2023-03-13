@@ -1,0 +1,64 @@
+/* reserved for global ui classes */
+
+html, body{ 
+    display: flex;
+    height:100%;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+header{
+    display: flex;
+    gap: 6px;
+    background-color: lightgray;
+
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+header * {
+    background-color: gray;
+    padding: 1rem;
+}
+
+header h1:nth-child(2) {
+    flex-grow: 1;
+}
+
+
+content {
+    flex-grow: 1;
+    background-color: lightgray;
+    gap: 6px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+content * {
+    background-color: gray;
+    padding: 0.3rem;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+}
+
+content *:nth-child(2) {
+    flex-grow: 1;
+}
+
+content div:nth-child(1) {
+    display: flex;
+}
+
+content div:nth-child(1) button{
+    font-size: 30px;
+    padding: 0;
+    padding-left: 0.6rem;
+    border: none;
+}
+

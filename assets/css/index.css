@@ -1,0 +1,143 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+/* variables */
+
+:root {
+    --bg-col: 29, 29, 29;
+
+    --div-layer1: rgb(43, 43, 43);
+    --div-layer2: rgb(20, 20, 20);
+    --div-layer3: rgb(0, 0, 0);
+
+    --col1: #4c5760;
+    --col2: #93a8ac;
+    --col3: #d7ceb2;
+    --col4: #a59e8c;
+    --col5: #66635b;
+
+    --margin: 4px;
+
+    --font: 'Source Sans Pro';
+    --text-color: white;
+}
+
+body {
+    margin: 0;
+    padding: 10%;
+
+    color: var(--text-color);
+    font-family: var(--font);
+
+    background-color: rgb(var(--bg-col));
+}
+
+/* headers */
+
+header {
+    background-color: #00000000;
+}
+
+header h1 {
+    background-color: var(--div-layer1);
+    border-radius: 5px;
+}
+
+header h1:nth-child(1) {
+    border-top: var(--col1) solid 6px;
+}
+
+header h1:nth-child(2) {
+    border-top: var(--col2) solid 6px;
+}
+
+/* content */
+
+content {
+    background-color: #00000000;
+}
+
+content div {
+    border-radius: 5px;
+}
+
+.body-content {
+    background-color: var(--div-layer1);
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    max-height: 500px;
+}
+
+.body-content * {
+    background-color: var(--div-layer2);
+}
+
+.blogs {
+    display: flex;
+    padding: 15px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    max-width: 250px;
+    flex-direction: column;
+    gap: 5px;
+    max-height: 500px; /* nice */
+    overflow-y: auto;
+}
+
+.blogs div {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    max-height: fit;
+    background-color: var(--div-layer3);
+}
+
+.blogs div * {
+    background-color: var(--div-layer3);
+}
+
+/* scrollbar */
+
+.blogs {
+    scrollbar-width: 1vw;
+    scrollbar-color: var(--div-layer1) var(--div-layer2);
+}
+
+.blogs::-webkit-scrollbar {
+    width: 1vw;
+    background: var(--div-layer2);
+}
+  
+.blogs::-webkit-scrollbar-track {
+    background: var(--div-layer2);
+    margin-block: 0.5rem;
+    border-radius: 100vw;
+}
+.blogs::-webkit-scrollbar-thumb {
+    border: 0.6vw solid var(--div-layer1);
+    border-radius: 100vw;
+}
+
+html {
+    scrollbar-width: 1vw;
+    scrollbar-color: var(--div-layer1) var(--div-layer2);
+}
+
+html::-webkit-scrollbar {
+    width: 1vw;
+    background: var(--div-layer2);
+}
+  
+html::-webkit-scrollbar-track {
+    background: var(--div-layer2);
+    margin-block: 0.5rem;
+    border-radius: 100vw;
+}
+html::-webkit-scrollbar-thumb {
+    border: 0.6vw solid var(--div-layer1);
+    border-radius: 100vw;
+}
