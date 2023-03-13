@@ -78,19 +78,19 @@ content div {
     padding: 15px;
     padding-top: 17px;
     padding-bottom: 17px;
-    max-width: 250px;
+    width: 250px;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
 }
 
-.blogs {
+#blogs {
     display: flex;
     flex-direction: column;
     gap:6px;
 }
 
-.blogs div {
+#blogs div {
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -100,20 +100,24 @@ content div {
     background-color: var(--div-layer3);
 }
 
-.blogs div * {
+#blogs div * {
     background-color: var(--div-layer3);
 }
 
 .menus {
     display: flex;
     gap:6px;
+    flex-grow: 1;
     flex-direction: column;
 }
+
 .menus button {
     background-color: rgb(var(--bg-col), 1);
     color: #ffffffaa;
+    flex-shrink: 1;
     display: block;
     border-radius: 5px;
+    max-height: 60px;
     width: 100%;
     font-size: x-large !important;
     padding: 15px !important;
@@ -121,22 +125,22 @@ content div {
 }
 /* scrollbar */
 
-.blogs {
+#blogs {
     scrollbar-width: 1vw;
     scrollbar-color: var(--div-layer1) var(--div-layer2);
 }
 
-.blogs::-webkit-scrollbar {
+#blogs::-webkit-scrollbar {
     width: 1vw;
     background: var(--div-layer2);
 }
   
-.blogs::-webkit-scrollbar-track {
+#blogs::-webkit-scrollbar-track {
     background: var(--div-layer2);
     margin-block: 0.5rem;
     border-radius: 100vw;
 }
-.blogs::-webkit-scrollbar-thumb {
+#blogs::-webkit-scrollbar-thumb {
     border: 0.6vw solid var(--div-layer1);
     border-radius: 100vw;
 }

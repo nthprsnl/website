@@ -20,38 +20,40 @@
     </header>
     <content>
         <div class="header">
-            <button>+</button>
-            <p>HOMEPAGE </p>
+            <button onclick="toggle()">+</button>
+            <p id="title">HOMEPAGE </p>
         </div>
 
         <div class="body-content">
             <div class="left-side">
-                <div class="blogs">
-                    <h1>blog posts</h1>
+                <div class="currentMenu" id="blogs">
+                    <h1>blog & news</h1>
                     <div>
                         <h1>
                             new year,
                             new design
                         </h1>
-                        <p>this, also has nowhere to link to</p>
+                        <p>blog posts are not finished yet</p>
                     </div>
                     <div>
                         <h2>
-                        test blog post
+                        what web development feels like
                         </h2>
-                        <p>this actually doesn't link to anywhere lmao</p>
+                        <p>gosh i really need to sleep</p>
                     </div>
                     <div>
                         <h2>
-                        test blog post
+                        how do you write blogs anyways
                         </h2>
-                        <p>this actually doesn't link to anywhere lmao</p>
+                        <p>theyre like, too long  i can't even write</p>
                     </div>
                 </div>
                 <div class="menus">
                     <h1>menus</h1>
-                    <button onclick="changeMenu('featured')">HOMEPAGE</button>
-                    <button onclick="changeMenu('test')">ABOUT ME</button>
+                    <button onclick="changeMenu(event, 'unfinished')">HOMEPAGE</button>
+                    <button onclick="changeMenu(event, 'unfinished')">ABOUT ME</button>
+                    <button onclick="changeMenu(event, 'unfinished')">PROJECTS</button>
+                    <button onclick="changeMenu(event, 'unfinished'); toggle()">BLOGS & NEWS</button>
                 </div>
             </div>
             <div class="right-side">
@@ -60,9 +62,9 @@
                         <h2 style="opacity: 0.2;">this is a featured page</h2>
                     </div>
                 </div>
-                <div class="menuContent test">
+                <div class="menuContent unfinished">
                     <div style="display: flex; margin-top: 50px; justify-content: center; align-items: center;">
-                        <h2 style="opacity: 0.2;">this is a about page</h2>
+                        <h2 style="opacity: 0.2;">this page is unfinished, check back later!</h2>
                     </div>
                 </div>
             </div>
