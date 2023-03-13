@@ -74,16 +74,20 @@ content div {
     background-color: var(--div-layer2);
 }
 
-.blogs {
-    display: flex;
+.left-side {
     padding: 15px;
     padding-top: 17px;
     padding-bottom: 17px;
     max-width: 250px;
+    display: flex;
     flex-direction: column;
-    gap: 5px;
-    max-height: 500px; /* nice */
     overflow-y: auto;
+}
+
+.blogs {
+    display: flex;
+    flex-direction: column;
+    gap:6px;
 }
 
 .blogs div {
@@ -100,6 +104,21 @@ content div {
     background-color: var(--div-layer3);
 }
 
+.menus {
+    display: flex;
+    gap:6px;
+    flex-direction: column;
+}
+.menus button {
+    background-color: rgb(var(--bg-col), 1);
+    color: #ffffffaa;
+    display: block;
+    border-radius: 5px;
+    width: 100%;
+    font-size: x-large !important;
+    padding: 15px !important;
+    text-align: left;
+}
 /* scrollbar */
 
 .blogs {
@@ -142,11 +161,12 @@ html::-webkit-scrollbar-thumb {
     border-radius: 100vw;
 }
 
+/* medias */
 @media all and (max-width: 1024px) {
     .body-content {
         flex-direction: column-reverse;
     }
-    .blogs {
+    .left-side{
         max-width: none;
     }
 }
