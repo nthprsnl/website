@@ -141,3 +141,15 @@ html::-webkit-scrollbar-thumb {
     border: 0.6vw solid var(--div-layer1);
     border-radius: 100vw;
 }
+
+@media all and (max-width: 1024px) {
+    header {
+        flex-direction:column;
+    }
+    .body-content {
+        flex-direction: column-reverse;
+    }
+    .blogs {
+        max-width: none;
+    }
+}
