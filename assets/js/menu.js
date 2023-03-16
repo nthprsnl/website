@@ -1,3 +1,8 @@
+menucontent = document.getElementsByClassName("menuContent");
+for (i = 0; i < menucontent.length; i++) {
+    menucontent[i].style.display = "none";
+}
+document.getElementsByClassName('featured')[0].style.display = "flex";
 function changeMenu(event, menu) {
     menucontent = document.getElementsByClassName("menuContent");
     for (i = 0; i < menucontent.length; i++) {
@@ -5,7 +10,7 @@ function changeMenu(event, menu) {
     }
 
     currentElement = document.getElementsByClassName(menu)[0]
-    currentElement.style.display = "block";
+    currentElement.style.display = "flex";
 
     document.getElementById('title').innerHTML = event.target.innerHTML
 }
@@ -21,9 +26,6 @@ function toggle() {
     }
     toggleMenu = !toggleMenu;
 }
-
-toggle()
-changeMenu('featured')
 
 function sex() {
     return console.log('thanks for checking the source code lmao')

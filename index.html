@@ -16,7 +16,7 @@
 <body>
     <header class="header">
         <h1>nth's silly website</h1>
-        <h1>[insert functional working code]</h1>
+        <h1 id="splash">still on beta !!</h1>
     </header>
     <content>
         <div class="header">
@@ -45,12 +45,12 @@
                         <h2>
                         how do you write blogs anyways
                         </h2>
-                        <p>theyre like, too long  i can't even write</p>
+                        <p>theyre like, too long  i can't even write essays</p>
                     </div>
                 </div>
-                <div class="menus">
+                <div class="menus" style="display:none;">
                     <h1>menus</h1>
-                    <button onclick="changeMenu(event, 'unfinished')">HOMEPAGE</button>
+                    <button id="mainMenu" onclick="changeMenu(event, 'featured')">HOMEPAGE</button>
                     <button onclick="changeMenu(event, 'unfinished')">ABOUT ME</button>
                     <button onclick="changeMenu(event, 'unfinished')">PROJECTS</button>
                     <button onclick="changeMenu(event, 'unfinished'); toggle()">BLOGS & NEWS</button>
@@ -58,13 +58,30 @@
             </div>
             <div class="right-side">
                 <div class="menuContent featured">
-                    <div style="display: flex; margin-top: 50px; justify-content: center; align-items: center;">
-                        <h2 style="opacity: 0.2;">this is a featured page</h2>
+                    <div>
+                        <div style="flex-grow: 1; display: flex; flex-direction: column;">
+                            <img src="https://purr.objects-us-east-1.dream.io/i/Z0qBI.jpg">
+                            <h1>this is two cats</h1>
+                            <h5>bro literally said ctrl+c ctrl+v</h5>
+                        </div>
+                        <div style="flex-grow: 1; display: flex; flex-direction: column;">
+                            <img src="https://purr.objects-us-east-1.dream.io/i/feather.png">
+                            <h1>cats :3</h1>
+                            <h5>look at him he is so cuuute</h5>
+                        </div>
+                    </div>
+                    <div style="margin-top: -10;">
+                        <div style="flex-grow: 1; display: flex; flex-direction: column; margin: 0;">
+                            <h1>this is a cropped cat</h1>
+                            <img src="https://purr.objects-us-east-1.dream.io/i/lddng.jpg">
+                            <h5>aww why he cropped</h5>
+                        </div>
                     </div>
                 </div>
                 <div class="menuContent unfinished">
-                    <div style="display: flex; margin-top: 50px; justify-content: center; align-items: center;">
-                        <h2 style="opacity: 0.2;">this page is unfinished, check back later!</h2>
+                    <div style="display: flex;
+                     justify-content: center; align-items: center;">
+                        <h2 style="opacity: 0.2;">this page is <br> unfinished, check <br>back later!</h2>
                     </div>
                 </div>
             </div>
@@ -72,6 +89,8 @@
     </content>
 
     <script src="/assets/js/menu.js"></script>
+    <script src="/assets/js/splash.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </body>
 

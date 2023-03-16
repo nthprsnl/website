@@ -78,7 +78,8 @@ content div {
     padding: 15px;
     padding-top: 17px;
     padding-bottom: 17px;
-    width: 250px;
+    min-width: 250px;
+    max-width: 250px;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
@@ -119,34 +120,35 @@ content div {
     border-radius: 5px;
     max-height: 60px;
     width: 100%;
+    font-family: 'Source Sans Pro' !important;
     font-size: x-large !important;
     padding: 15px !important;
     text-align: left;
 }
 /* scrollbar */
 
-#blogs {
+div {
     scrollbar-width: 1vw;
     scrollbar-color: var(--div-layer1) var(--div-layer2);
 }
 
-#blogs::-webkit-scrollbar {
-    width: 1vw;
+div::-webkit-scrollbar {
+    width: 0.6vw;
     background: var(--div-layer2);
 }
   
-#blogs::-webkit-scrollbar-track {
+div::-webkit-scrollbar-track {
     background: var(--div-layer2);
     margin-block: 0.5rem;
     border-radius: 100vw;
 }
-#blogs::-webkit-scrollbar-thumb {
-    border: 0.6vw solid var(--div-layer1);
+div::-webkit-scrollbar-thumb {
+    border: 0.9vw solid var(--div-layer1);
     border-radius: 100vw;
 }
 
 html {
-    scrollbar-width: 1vw;
+    scrollbar-width: 2vw;
     scrollbar-color: var(--div-layer1) var(--div-layer2);
 }
 
@@ -161,7 +163,7 @@ html::-webkit-scrollbar-track {
     border-radius: 100vw;
 }
 html::-webkit-scrollbar-thumb {
-    border: 0.6vw solid var(--div-layer1);
+    border: 0.8vw solid var(--div-layer1);
     border-radius: 100vw;
 }
 
@@ -171,6 +173,7 @@ html::-webkit-scrollbar-thumb {
         flex-direction: column-reverse;
     }
     .left-side{
+        min-width: none;
         max-width: none;
     }
 }
@@ -178,4 +181,60 @@ html::-webkit-scrollbar-thumb {
     header {
         flex-direction:column;
     }
+    .menuContent div {
+        flex-direction: column;
+    }
+}
+
+/* page specific uhh */
+
+.right-side {
+    overflow-y: auto;
+}
+.menuContent {
+    margin: 0;
+    padding:10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.menuContent div {
+    margin: 0;
+}
+.menuContent div div {
+    background-color: var(--div-layer3);
+    border-radius: 10px;
+}
+
+.featured {
+    flex-direction: column;
+}
+
+.featured div * {
+    background-color: var(--div-layer3);
+    padding:10px;
+}
+
+.featured div h5 {
+    opacity: 0.4;
+}
+
+.featured div img{
+    object-fit: cover;
+    object-position: center center;
+    padding:0;
+    border-radius: 5px;
+    margin:0;
+    width:100%;
+    max-height: 200px;
+    overflow: hidden;
+}
+
+.featured div img:hover{
+    height: auto;
+}
+
+.featured div {
+    display: flex; 
+    flex-grow: 1;
+    gap:8px
 }
